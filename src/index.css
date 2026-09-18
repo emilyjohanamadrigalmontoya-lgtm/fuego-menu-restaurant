@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-cinzel: 'Cinzel', serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0b0809;
+    color: #f7f3ee;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-brand {
+    font-family: var(--font-cinzel);
+    letter-spacing: 0.04em;
+  }
+}
+
+/* Custom fire glow & ambient subtle animations */
+@keyframes flame-flicker {
+  0%, 100% { opacity: 0.85; transform: scale(1); filter: brightness(1); }
+  50% { opacity: 0.98; transform: scale(1.02); filter: brightness(1.15); }
+}
+
+@keyframes ember-rise {
+  0% { transform: translateY(0) translateX(0) scale(0.8); opacity: 0; }
+  20% { opacity: 0.8; }
+  80% { opacity: 0.6; }
+  100% { transform: translateY(-80px) translateX(15px) scale(0.2); opacity: 0; }
+}
+
+.animate-flame-subtle {
+  animation: flame-flicker 4s ease-in-out infinite;
+}
+
+.fire-glow {
+  box-shadow: 0 0 35px -8px rgba(220, 38, 38, 0.35);
+}
+
+.fire-glow-sm {
+  box-shadow: 0 0 18px -4px rgba(249, 115, 22, 0.25);
+}
+
+.fire-border-gradient {
+  border-image: linear-gradient(to bottom, rgba(225, 29, 72, 0.4), rgba(249, 115, 22, 0.1), transparent) 1;
+}
+
+/* Smooth custom scrollbar for categories & menus */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #110c0e;
+}
+::-webkit-scrollbar-thumb {
+  background: #33141a;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #631d27;
+}
+

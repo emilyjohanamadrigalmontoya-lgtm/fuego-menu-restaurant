@@ -1,0 +1,6 @@
+{
+  "name": "FUEGO Gastrobar",
+  "description": "Contemporary gastrobar interactive digital menu and ordering application with intelligent pairings and WhatsApp integration in Ibagué, Tolima, Colombia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
